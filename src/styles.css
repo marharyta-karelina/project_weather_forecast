@@ -1,0 +1,88 @@
+body {
+  font-family: "Nunito", sans-serif;
+  color: #616f81;
+}
+h1,
+.temperature {
+  font-family: "Varela Round", sans-serif;
+  font-size: 70px;
+}
+h1 {
+  margin-top: 30px;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #616f81;
+}
+a:hover {
+  opacity: 0.7;
+}
+.temperature {
+  color: #708094;
+  text-align: left;
+  margin: 0;
+}
+.units {
+  position: relative;
+  top: -42px;
+  font-size: 15px;
+}
+.card-main {
+  margin: 20px auto;
+  width: 70%;
+  padding: 50px;
+  border: none;
+  border-radius: 25px;
+  background: rgb(178, 202, 228);
+  background: radial-gradient(
+    circle,
+    rgba(178, 202, 228, 1) 0%,
+    rgba(135, 169, 205, 1) 100%
+  );
+}
+.day-time {
+  font-size: 18px;
+  color: #fff;
+}
+.card-day {
+  margin: 30px 0 0;
+  background: #dee6f0;
+  border: none;
+  border-radius: 20px;
+}
+.second-block {
+  margin-top: 20px;
+  background: #dee6f0;
+  border: none;
+  border-radius: 20px;
+}
+.emoji-main {
+  margin-top: 10px;
+  font-size: 100px;
+  opacity: 0.8;
+  text-align: center;
+}
+.weather_description {
+  text-align: center;
+  margin-top: -20px;
+}
+.temperature-main {
+  margin: 20px;
+}
+
+.factors-weather {
+  margin-top: 40px;
+  font-size: 20px;
+}
+.max-temperature,
+.min-temperature,
+.weather-option-humidity,
+.wind {
+  color: #2e75bf;
+}
+.card-day {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 20px;
+}
