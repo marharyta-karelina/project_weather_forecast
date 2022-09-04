@@ -43,14 +43,17 @@ function realTemperature(response) {
     response.data.main.temp_max
   );
 }
-function cityChoose(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "42c195090748727a9b0a818ba660488c";
-  let city = document.querySelector("#type-city").value;
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}`).then(realTemperature);
-  console.log(apiUrl);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#type-city").value;
+  search(city);
 }
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", cityChoose);
+form.addEventListener("submit", handleSubmit);
+
+search("Lviv");
