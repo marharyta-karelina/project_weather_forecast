@@ -75,12 +75,7 @@ a:hover {
   margin-top: 40px;
   font-size: 20px;
 }
-.max-temperature,
-.min-temperature,
-.weather-option-humidity,
-.wind {
-  color: #2e75bf;
-}
+
 .card-day {
   text-align: center;
   padding: 15px 10px;
