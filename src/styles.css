@@ -18,6 +18,9 @@ a {
 a:hover {
   opacity: 0.7;
 }
+footer {
+  text-align: center;
+}
 .temperature {
   color: #708094;
   text-align: left;
@@ -87,4 +90,7 @@ a:hover {
 .button-size {
   padding: 6px 25px;
   color: white;
+}
+.footer {
+  color: #2e75bf;
 }
