@@ -81,3 +81,10 @@ a:hover {
   padding: 15px 10px;
   font-size: 20px;
 }
+.button-search {
+  padding: 0;
+}
+.button-size {
+  padding: 6px 25px;
+  color: white;
+}
