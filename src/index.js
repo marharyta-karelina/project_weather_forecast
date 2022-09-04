@@ -35,7 +35,7 @@ function realTemperature(response) {
     response.data.main.feels_like
   );
   document.querySelector(".weather_description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector(".min-temperature").innerHTML = Math.round(
     response.data.main.temp_min
   );
