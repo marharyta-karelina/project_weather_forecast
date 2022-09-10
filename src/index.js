@@ -36,11 +36,10 @@ function realTemperature(response) {
   );
   document.querySelector(".weather_description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector(".min-temperature").innerHTML = Math.round(
-    response.data.main.temp.min
-  );
-  document.querySelector(".max-temperature").innerHTML = Math.round(
-    response.data.main.temp_max
+  let iconElement = document.querySelector(".emoji-main");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 function search(city) {
