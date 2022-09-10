@@ -37,7 +37,7 @@ function realTemperature(response) {
   document.querySelector(".weather_description").innerHTML =
     response.data.weather[0].description;
   document.querySelector(".min-temperature").innerHTML = Math.round(
-    response.data.main.temp_min
+    response.data.main.temp.min
   );
   document.querySelector(".max-temperature").innerHTML = Math.round(
     response.data.main.temp_max
@@ -47,6 +47,7 @@ function search(city) {
   let apiKey = "42c195090748727a9b0a818ba660488c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}`).then(realTemperature);
+  console.log(apiUrl);
 }
 function handleSubmit(event) {
   event.preventDefault();
