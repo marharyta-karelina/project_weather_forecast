@@ -46,7 +46,6 @@ function search(city) {
   let apiKey = "42c195090748727a9b0a818ba660488c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}`).then(realTemperature);
-  console.log(apiUrl);
 }
 function handleSubmit(event) {
   event.preventDefault();
@@ -57,3 +56,16 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Lviv");
+
+let currentLocationButton = document.querySelector(".current-location");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function currentLocation(position) {
+  let apiKey = "42c195090748727a9b0a818ba660488c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}`).then(realTemperature);
+}
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(currentLocation);
+}
