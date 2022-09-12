@@ -11,15 +11,12 @@ h1 {
   margin: 30px 0 0;
   color: #fff;
 }
-a {
-  text-decoration: none;
-  color: #616f81;
-}
-a:hover {
-  opacity: 0.7;
-}
 footer {
   text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #2e75bf;
 }
 .temperature {
   color: #708094;
@@ -30,6 +27,13 @@ footer {
   position: relative;
   top: -42px;
   font-size: 15px;
+}
+.temperature-main .active {
+  color: #616f81;
+  cursor: default;
+}
+.temperature-main .active:hover {
+  text-decoration: none;
 }
 .card-main {
   margin: 20px auto;
@@ -83,7 +87,11 @@ footer {
   margin-top: 60px;
   font-size: 20px;
 }
-
+.feels_mark_celsius {
+  position: relative;
+  top: -3px;
+  font-size: 12px;
+}
 .card-day {
   text-align: center;
   padding: 15px 10px;
@@ -95,7 +103,4 @@ footer {
 .button-size {
   padding: 6px 25px;
   color: white;
-}
-.footer {
-  color: #2e75bf;
 }
