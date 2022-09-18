@@ -69,7 +69,6 @@ a {
   margin: 20px auto;
   margin-bottom: 0;
   width: 130px;
-  opacity: 0.9;
 }
 .weather_description {
   text-align: center;
@@ -96,6 +95,12 @@ a {
   text-align: center;
   padding: 15px 10px;
   font-size: 20px;
+}
+.forecast-day {
+  margin: 0;
+}
+.forecast-icon {
+  margin: 0 auto;
 }
 .button-search {
   padding: 0;
