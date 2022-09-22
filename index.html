@@ -39,69 +39,73 @@
                 autofocus="on"
                 placeholder="Type a city"
               />
+            </form>
           </div>
           <div class="col-2">
-                <input
-                  type="submit"
-                  class="btn btn-primary shadow-sm button-size"
-                  value="Search"
-                />
+            <input
+              type="submit"
+              class="btn btn-primary shadow-sm button-size"
+              value="Search"
+            />
           </div>
           <div class="col-2 button-search">
             <input
-                  type="submit"
-                  class="btn btn-warning shadow-sm button-size current-location"
-                  value = "Current"
-                />
-          </div> 
-            </form>
+              type="submit"
+              class="btn btn-secondary shadow-sm button-size current-location"
+              value="Current"
+            />
+          </div>
         </div>
         <div class="row">
           <div class="col">
             <h1 id="city"></h1>
             <p class="day-time" id="currentDayTime"></p>
           </div>
-      </div>
-          <div class="card second-block">
-            <div class="row">
-              <div class="col-4">
-                <div>
-                  <img 
-                  class="emoji-main"
-                  src="">
-                 </div>
-                <p class="weather_description"></p>
+        </div>
+        <div class="card second-block">
+          <div class="row">
+            <div class="col-4">
+              <div>
+                <img class="emoji-main" src="" />
               </div>
-              <div class="col-4">
-                <div class="temperature-main">
-                  <span class="temperature" id="main-temperature"></span>
-                  <span class="units">
-                    <a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
-                  <p>Feels like <span class="feels"> </span><span class="feels_mark_celsius">°C</span></p>
-                </div>
-              </div>
-              <div class="col-4">
-                <p class="factors-weather">
-                  Humidity: 
-                  <span class="humidity">
-                  </span>
-                    %
-                  <br />
-                  Wind: 
-                 <span class="wind">
-                 </span> 
-                  km/h
-                  </p>
+              <p class="weather_description"></p>
+            </div>
+            <div class="col-4">
+              <div class="temperature-main">
+                <span class="temperature" id="main-temperature"></span>
+                <span class="units"> °C </span>
+                <p>
+                  Feels like <span class="feels"> </span
+                  ><span class="feels_mark_celsius">°C</span>
+                </p>
               </div>
             </div>
+            <div class="col-4">
+              <p class="factors-weather">
+                Humidity:
+                <span class="humidity"> </span>%
+                <br />
+                Wind:
+                <span class="wind"> </span>
+                km/h
+              </p>
+            </div>
           </div>
-        <div class="weather-forecast"></div>
         </div>
+        <div class="weather-forecast"></div>
+      </div>
     </div>
     <footer>
-      This project was coded by Marharyta Karelina and is <a href = "https://github.com/marharyta-karelina/project_weather_forecast" class="footer"> open-sourced on GitHub </a>and <a href="https://wonderful-kashata-3b477f.netlify.app/" class="footer"> hosted on Netlify</a>
+      This project was coded by Marharyta Karelina and is
+      <a
+        href="https://github.com/marharyta-karelina/project_weather_forecast"
+        class="footer"
+      >
+        open-sourced on GitHub </a
+      >and
+      <a href="https://wonderful-kashata-3b477f.netlify.app/" class="footer">
+        hosted on Netlify</a
+      >
     </footer>
     <script src="src/index.js"></script>
   </body>

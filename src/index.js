@@ -33,7 +33,6 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector(".weather-forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["SUN", "MON", "THU"];
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
@@ -73,21 +72,18 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = `c6f8ef4575250284954db9f4dfa7a996`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function realTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let mainTemperatureCelsius = document.querySelector("#main-temperature");
-  celsiusTemperature = response.data.main.temp;
   mainTemperatureCelsius.innerHTML = `${temperature}`;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".humidity").innerHTML = response.data.main.humidity;
   document.querySelector(".wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  feelsTemperatureCelsius = response.data.main.feels_like;
   document.querySelector(".feels").innerHTML = Math.round(
     response.data.main.feels_like
   );
@@ -98,7 +94,6 @@ function realTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  celsiusTemperature = response.data.main.temp;
   getForecast(response.data.coord);
 }
 function search(city) {
@@ -126,39 +121,5 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
-
-function displayFahrenhaitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#main-temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenhaitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenhaitTemperature);
-
-  let feelsFahrenhaitTemperature = (feelsTemperatureCelsius * 9) / 5 + 32;
-
-  let feelsTemperature = document.querySelector(".feels");
-  feelsTemperature.innerHTML = Math.round(feelsFahrenhaitTemperature);
-  let markFahrenhait = document.querySelector(".feels_mark_celsius");
-  markFahrenhait.innerHTML = "°F";
-}
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#main-temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  let feelsTemperature = document.querySelector(".feels");
-  feelsTemperature.innerHTML = Math.round(feelsTemperatureCelsius);
-  let markCelsius = document.querySelector(".feels_mark_celsius");
-  markCelsius.innerHTML = "°C";
-}
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenhaitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Lviv");

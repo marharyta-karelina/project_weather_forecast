@@ -28,13 +28,6 @@ a {
   top: -42px;
   font-size: 15px;
 }
-.temperature-main .active {
-  color: #616f81;
-  cursor: default;
-}
-.temperature-main .active:hover {
-  text-decoration: none;
-}
 .card-main {
   margin: 20px auto;
   width: 70%;
@@ -64,26 +57,27 @@ a {
   border: none;
   border-radius: 20px;
 }
+
 .emoji-main {
   display: block;
-  margin: 20px auto;
+  margin: 0 auto;
   margin-bottom: 0;
   width: 130px;
 }
 .weather_description {
   text-align: center;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 .weather_description:first-letter {
   text-transform: capitalize;
 }
 .temperature-main {
-  margin-top: 35px;
-  margin-left: 40px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .factors-weather {
-  margin-top: 60px;
+  margin-top: 55px;
   font-size: 20px;
 }
 .feels_mark_celsius {
@@ -93,7 +87,7 @@ a {
 }
 .card-day {
   text-align: center;
-  padding: 15px 10px;
+  padding: 5px 10px;
   font-size: 20px;
 }
 .forecast-day {
@@ -108,4 +102,7 @@ a {
 .button-size {
   padding: 6px 25px;
   color: white;
+}
+.forecast-weather-min {
+  opacity: 0.6;
 }
