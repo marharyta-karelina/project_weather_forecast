@@ -77,7 +77,8 @@ a {
 
 .factors-weather {
   margin-top: 55px;
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
 }
 .feels_mark_celsius {
   position: relative;
