@@ -76,10 +76,13 @@ function getForecast(coordinates) {
 }
 
 function realTemperature(response) {
+  console.log(response.data.sys.country);
   let temperature = Math.round(response.data.main.temp);
   let mainTemperatureCelsius = document.querySelector("#main-temperature");
   mainTemperatureCelsius.innerHTML = `${temperature}`;
   document.querySelector("#city").innerHTML = response.data.name;
+  let country = document.querySelector(".country");
+  country.innerHTML = response.data.sys.country;
   document.querySelector(".humidity").innerHTML = response.data.main.humidity;
   document.querySelector(".wind").innerHTML = Math.round(
     response.data.wind.speed
