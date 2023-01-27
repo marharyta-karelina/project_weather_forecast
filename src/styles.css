@@ -106,3 +106,55 @@ a {
 .forecast-weather-min {
   opacity: 0.6;
 }
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  .container {
+    padding: 0;
+  }
+  .card-main {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    border-radius: 0;
+  }
+  .search {
+    width: 100%;
+    padding: 5px;
+  }
+  .container .col-2 {
+    width: 35%;
+  }
+  .second-block {
+    margin: 0;
+  }
+  .emoji-main {
+    width: 100px;
+  }
+  .temperature-main {
+    margin-top: 5px;
+  }
+  .factors-weather {
+    font-size: 12px;
+  }
+  .weather-forecast .row {
+    flex-wrap: nowrap;
+  }
+  .weather-forecast .col {
+    padding: 5px;
+  }
+  .card-day {
+    padding: 5px;
+    font-size: 16px;
+  }
+  .card-day img {
+    width: 48px;
+  }
+  footer {
+    padding: 20px 10px;
+  }
+}
